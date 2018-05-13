@@ -145,6 +145,7 @@ def create_movie_tiles_content(movies):
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
+    print(content)
     return content
 
 
