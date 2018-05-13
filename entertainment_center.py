@@ -23,7 +23,7 @@ if configResponse.ok:
                     youtubeUrl = "https://www.youtube.com/watch?v=" + trailerJsonData['results'][0]['key']
                     print("Please wait .. fetching movies from the API\n")                    
                     movie = media.Movie(result['title'], basePosterUrl + basePosterSize + result['poster_path'], youtubeUrl)
-                    print("Fetched: {}".format(movie))
+                    print("\033[92m Fetched: \033[94m{}\033[0m".format(movie))
                     movieList.append(movie)
                 except:
                     continue
