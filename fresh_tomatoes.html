@@ -12,6 +12,8 @@
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: black;
+            color: white;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -31,10 +33,13 @@
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            -webkit-transition: all 2s; /* Safari */
+            transition: all 2s;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #708090;
             cursor: pointer;
+            transform: scale(1.2);
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -137,6 +142,11 @@
     <h2>Rampage</h2>
 </div>
 
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zNCz4mQzfEI" data-toggle="modal" data-target="#trailer">
+    <img src="https://image.tmdb.org/t/p/w500/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg" width="220" height="342">
+    <h2>Coco</h2>
+</div>
+
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="bGt-saFvkNk" data-toggle="modal" data-target="#trailer">
     <img src="https://image.tmdb.org/t/p/w500/cezWGskPY5x7GaglTTRN4Fugfb8.jpg" width="220" height="342">
     <h2>The Avengers</h2>
@@ -145,11 +155,6 @@
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="64-iSYVmMVY" data-toggle="modal" data-target="#trailer">
     <img src="https://image.tmdb.org/t/p/w500/coss7RgL0NH6g4fC2s5atvf3dFO.jpg" width="220" height="342">
     <h2>The Maze Runner</h2>
-</div>
-
-<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zNCz4mQzfEI" data-toggle="modal" data-target="#trailer">
-    <img src="https://image.tmdb.org/t/p/w500/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg" width="220" height="342">
-    <h2>Coco</h2>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="ye6GCY_vqYk" data-toggle="modal" data-target="#trailer">
