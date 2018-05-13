@@ -28,7 +28,7 @@ if configResponse.ok:  # Check if a success status of 200 is returned.
         for result in movieJsonData['results']: # Iterate over all the movies fetched from the API
             trailerResponse = requests.get("https://api.themoviedb.org/3/movie/"+str(result['id'])+"/videos?api_key=d52b401aad5afca8dc068a00604370d4&language=en-US") # Make a request for the movie's trailer
             if trailerResponse.ok: # Check if the trailer of the movie is successfully retrieved
-                trailerJsonData = json.loads(trailserResponse.content) # Parse the json trailer response 
+                trailerJsonData = json.loads(trailerResponse.content) # Parse the json trailer response 
                 try:
                     youtubeUrl = "https://www.youtube.com/watch?v=" + trailerJsonData['results'][0]['key'] # Generate the youtube URL of the movie trailer
                     print("Please wait .. fetching movies from the API\n") # Helper text               
