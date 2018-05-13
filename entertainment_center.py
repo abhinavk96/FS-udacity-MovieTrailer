@@ -3,8 +3,13 @@ import requests
 import json
 import fresh_tomatoes
 
+# An empty list is initialised which will later store all the movie obects
 movieList = []
+
+# configUrl stores the URL which fetches configuration from the API. It is required to get Base Url for the poster images.
 configUrl = "https://api.themoviedb.org/3/configuration?api_key=d52b401aad5afca8dc068a00604370d4"
+
+# movieUrl stores the URL which fetches a single page of movies from the API based on their popularity in descending order.
 movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=d52b401aad5afca8dc068a00604370d4&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=true&page=1"
 
 movieResponse = requests.get(movieUrl)
