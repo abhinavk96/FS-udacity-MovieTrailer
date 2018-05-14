@@ -31,7 +31,7 @@ if configResponse.ok:
                     videoId = trailerJsonData['results'][0]['key']
                     youtubeUrl = "https://www.youtube.com/watch?v=" + videoId
                     print("Please wait .. fetching movies from the API\n")
-                    posterUrl = posterUrl + posterSize + result['poster_path']
+                    posterUrl = basePosterUrl+posterSize+result['poster_path']
                     # Create Movie objects and append to movie list
                     movie = media.Movie(result['title'], posterUrl, youtubeUrl)
                     print("\033[92m Fetched: \033[94m{}\033[0m".format(movie))
